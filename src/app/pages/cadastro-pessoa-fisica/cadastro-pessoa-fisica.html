@@ -1,0 +1,20 @@
+<h2> Cadastrar Pessoa </h2>
+
+<form (ngSubmit)="salvar()">
+
+    <div>
+        <label for="nome_pessoa_fisica">Digite o nome</label>
+        <input 
+            type="text" 
+            id="nome_pessoa_fisica"
+            [(ngModel)]="pessoa.nome_pessoa_fisica"
+            name="nome_pessoa_fisica" 
+            required
+            placeholder="Digite o nome da pessoa">
+    </div>
+
+    <button type="submit"> Salvar Pessoa</button>
+
+    <button type="button" (click)="voltar()">Cancelar</button>
+
+</form>

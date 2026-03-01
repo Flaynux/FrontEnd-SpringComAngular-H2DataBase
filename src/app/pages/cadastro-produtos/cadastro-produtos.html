@@ -1,0 +1,53 @@
+<h2>Cadastrar Novo Produto</h2>
+
+<form (ngSubmit)="salvar()">
+
+    <div>
+        <label for="descricao_produto">Nome do Produto:</label>
+        <input 
+            type="text" 
+            id="descricao_produto"
+            [(ngModel)]="produto.descricao_produto"
+            name="descricao_produto"
+            required
+            placeholder="Digite a descrição do produto" >
+    </div>
+
+    <br>
+
+    <div>
+        <label for="quantidade">Quantidade:</label>
+        <input 
+            type="number" 
+            name="quantidade" 
+            id="quantidade"
+            [(ngModel)]="produto.quantidade"
+            step="0.02"
+            min="0"
+            required
+            placeholder="Digite a quantidade">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="preco">Preço:</label>
+        <input 
+            type="number" 
+            name="preco" 
+            id="preco"
+            [(ngModel)]="produto.preco"
+            step="0.02"
+            min="0"
+            required
+            placeholder="Digite o preço">
+    </div>
+
+    <br>
+
+    <button type="submit">Salvar Produto</button>
+
+    <button type="button" (click)="voltarTelaProdutos()">Cancelar</button>
+
+
+</form>

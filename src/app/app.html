@@ -1,0 +1,29 @@
+<main>
+
+  <h1>Cadastro de Produtos</h1>
+
+  <nav>
+
+    <button (click)="secaoAtiva = 'lista_produto'">Lista de Produtos</button>
+    <button (click)="secaoAtiva = 'cadastro_produto'">Cadastrar Produtos</button>
+    <button (click)="secaoAtiva = 'cadastro_pessoa_fisica'">Cadastrar Pessoa</button>
+    <button (click)="secaoAtiva = 'lista_pessoa_fisica'">Listar Pessoa</button>
+
+  </nav>
+  
+  @if (secaoAtiva == 'lista_produto'){
+    <app-lista-produtos> </app-lista-produtos>
+  }
+
+  @if (secaoAtiva == 'cadastro_produto'){
+    <app-cadastro-produtos></app-cadastro-produtos>
+  }
+
+  @if (secaoAtiva == 'cadastro_pessoa_fisica'){
+    <app-cadastro-pessoa-fisica> </app-cadastro-pessoa-fisica>
+  }
+
+  @if (secaoAtiva == 'lista_pessoa_fisica'){
+  <app-lista-pessoas-fisicas></app-lista-pessoas-fisicas>
+  }
+</main>

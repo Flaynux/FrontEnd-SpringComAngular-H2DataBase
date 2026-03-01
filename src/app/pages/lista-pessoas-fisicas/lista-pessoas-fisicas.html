@@ -1,0 +1,23 @@
+<h2>Lista de Pessoas</h2>
+
+<br>
+
+<table border="1">
+    <thead>
+        <th>ID</th>
+        <th>Nome da Pessoa</th>
+    </thead>
+
+    <tbody>
+        @for(pessoa of pessoas; track pessoa.id){
+            <tr>
+                <td>{{pessoa.id}}</td>
+                <td> {{pessoa.nome_pessoa_fisica}}</td>
+            </tr>
+        }@empty {
+            <tr>
+                <td colspan="2"> Nenhuma Pessoa Cadastrada</td>
+            </tr>
+        }
+    </tbody>
+</table>
